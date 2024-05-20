@@ -150,6 +150,7 @@ main{
 
 .card{
     overflow: hidden;
+    border-radius: var(--radius-);
 }
 
 
