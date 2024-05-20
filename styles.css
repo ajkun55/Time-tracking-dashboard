@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+:root{
+    --clr-Blue: hsl(246, 80%, 60%);
+
+    --clr-Light-red: hsl(15, 100%, 70%);
+    --clr-Soft-blue: hsl(195, 74%, 62%);
+    --clr-Light-red2: hsl(348, 100%, 68%);
+    --clr-Lime-green: hsl(145, 58%, 55%);
+    --clr-Violet: hsl(264, 64%, 52%);
+    --clr-Soft-orange: hsl(43, 84%, 65%);
+
+    --clr-Very-dark-blue: hsl(226, 43%, 10%);
+    --clr-Dark-blue: hsl(235, 46%, 20%);
+    --clr-Desaturated-blue: hsl(235, 45%, 61%);
+    --clr-Pale-Blue: hsl(236, 100%, 87%);
+
+    --fw-4: 400;
+    --fw-5: 500;
+
+    --padding-: 30px;
+    --radius-: 1rem;
+}
+
+body{
+    font-family: "Rubik", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    background-color: var(--clr-Very-dark-blue);
+    color: white;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    min-height: 100vh;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.board{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 30px;
+    grid-template-areas: 
+    "person work play study"
+    "person exercise social care"; 
+    width: min(1110px,90%);
+    height: 520px;
+}
+
+
+#person{
+    grid-area: person;
+    font-size: 1rem;
+    line-height: 1.2;
+}
+
+.name{
+    background-color: var(--clr-Blue);
+    padding: var(--padding-);
+    border-radius: var(--radius-);
+    img{
+        max-width: 6em;
+        margin-block: 1rem 2rem;
+    }
+    h1{
+        font-weight: var(--fw-4);
+        margin-bottom: 3rem;
+    }
+    p{
+        color: var(--clr-Pale-Blue);
+    }
+}
+
+.choice{
+    font-weight: var(--fw-4);
+    background-color: var(--clr-Dark-blue);
+    display: grid;
+    padding: var(--padding-);
+    border-radius: 0 0 var(--radius-) var(--radius-);
+    #weekly{
+        margin-block: 20px;
+        color: white;
+    }
+    #monthly{
+        margin-bottom: 0.8rem;
+    }
+    position: relative;
+}
+
+.choice::after{
+    content: "";
+    width: 100%;
+    height: 2rem;
+    position: absolute;
+    top: -1rem;
+    left: 0;
+    background-color: var(--clr-Dark-blue);
+    z-index: -1;
+    
+}
+
+#work { 
+    grid-area: work; 
+    .card-header{
+        background-color: var(--clr-Light-red);
+    }
+}
+#play { 
+    grid-area: play; 
+    .card-header{
+        background-color: var(--clr-Soft-blue);
+    }
+}
+#study { 
+    grid-area: study; 
+    .card-header{
+        background-color: var(--clr-Light-red2);
+    }
+}
+#exercise { 
+    grid-area: exercise; 
+    .card-header{
+        background-color: var(--clr-Lime-green);
+    }
+}
+#social { 
+    grid-area: social; 
+    .card-header{
+        background-color: var(--clr-Violet);
+    }
+}
+#care { 
+    grid-area: care; 
+    .card-header{
+        background-color: var(--clr-Soft-orange);
+    }
+
+}
+
+
+.card{
+    overflow: hidden;
+}
+
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--clr-Pale-Blue);
+}
+
+a:hover{
+    color: white;
+}
+
+.card-body{
+    background-color: var(--clr-Dark-blue);
+    padding: var(--padding-);
+    border-radius: var(--radius-);
+    position: relative;
+    top: -1rem;
+}
+
+.card-body:hover{
+    background-color: var(--clr-Desaturated-blue);
+    cursor: pointer;
+}
+
+.card-header{
+    height: 4rem;
+    border-radius: var(--radius-) var(--radius-) 0 0;
+    img{
+        max-height: 100%;
+        aspect-ratio: 1;
+        position: relative;
+        left: 70%;
+    }
+}
+
+
+.line{
+    font-weight: var(--fw-5);
+    display: flex;
+    justify-content: space-between;
+    a{
+        position: relative;
+        top: -0.8rem;
+        font-size: 1.8rem;
+    }
+}
+
+.current{
+    font-size: 3rem;
+    margin-block: 1.5rem 1rem;
+}
+
+.last{
+    font-size: 1rem;
+    color: var(--clr-Pale-Blue);
+}
+
+@media (width < 800px){
+    :root{
+        --padding-: 12px;
+    }
+    .board{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        margin-block:5rem;
+    }
+    .name{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        h1{
+            margin-bottom: 0;
+            font-size: 1.3rem;  
+        }
+        img{
+            max-width: 3.5rem;
+            margin: 0;
+            margin-block: 2rem;
+        }
+    }
+    .choice{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        #monthly{
+            margin: 0;
+        }
+    }
+    .current{
+        font-size: 1.5rem;
+        margin: 0;
+    }
+    .line{
+        margin-top: 1rem;
+    }
+    .mobile-row{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-block: 1rem;
+    }
+}

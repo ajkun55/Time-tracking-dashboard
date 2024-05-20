@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <link rel="stylesheet" href="./styles.css" class="css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+
+  <main>
+    <div class="board">
+
+      <div class="card" id="person">
+        <div class="name">
+          <img src="./images/image-jeremy.png" alt="">
+          <div>
+            <p>Report for</p>
+            <h1>Jeremy Robson</h1>
+          </div>          
+        </div>
+
+        <div class="choice">
+          <a href="#" id="daily">Daily</a>
+          <a href="#" id="weekly">Weekly</a>
+          <a href="#" id="monthly">Monthly</a>
+        </div>
+      </div>
+
+      <div class="card" id="work">
+        <div class="card-header">
+          <img src="./images/icon-work.svg" alt="">
+        </div>
+        <div class="card-body">
+          <div class="line">
+            <p class="data-title"></p>
+            <a href="#">...</a>
+          </div>
+          <div class="mobile-row">
+            <p class="current"><span class="current-data"></span>hrs</p>
+            <p class="last"><span class="time"></span> - <span class="previous-data"></span>hrs</p>
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="card" id="play">
+        <div class="card-header">
+          <img src="./images/icon-play.svg" alt="">
+        </div>
+        <div class="card-body">
+          <div class="line">
+            <p class="data-title"></p>
+            <a href="#">...</a>
+          </div>
+          <div class="mobile-row">
+            <p class="current"><span class="current-data"></span>hrs</p>
+            <p class="last"><span class="time"></span> - <span class="previous-data"></span>hrs</p>
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="card" id="study">
+        <div class="card-header">
+          <img src="./images/icon-study.svg" alt="">
+        </div>
+        <div class="card-body">
+          <div class="line">
+            <p class="data-title"></p>
+            <a href="#">...</a>
+          </div>
+          <div class="mobile-row">
+            <p class="current"><span class="current-data"></span>hrs</p>
+            <p class="last"><span class="time"></span> - <span class="previous-data"></span>hrs</p>
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="card" id="exercise">
+        <div class="card-header">
+          <img src="./images/icon-exercise.svg" alt="">
+        </div>
+        <div class="card-body">
+          <div class="line">
+            <p class="data-title"></p>
+            <a href="#">...</a>
+          </div>
+          <div class="mobile-row">
+            <p class="current"><span class="current-data"></span>hrs</p>
+            <p class="last"><span class="time"></span> - <span class="previous-data"></span>hrs</p>
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="card" id="social">
+        <div class="card-header">
+          <img src="./images/icon-social.svg" alt="">
+        </div>
+        <div class="card-body">
+          <div class="line">
+            <p class="data-title"></p>
+            <a href="#">...</a>
+          </div>
+          <div class="mobile-row">
+            <p class="current"><span class="current-data"></span>hrs</p>
+            <p class="last"><span class="time"></span> - <span class="previous-data"></span>hrs</p>
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="card" id="care">
+        <div class="card-header">
+          <img src="./images/icon-self-care.svg" alt="">
+        </div>
+        <div class="card-body">
+          <div class="line">
+            <p class="data-title"></p>
+            <a href="#">...</a>
+          </div>
+          <div class="mobile-row">
+            <p class="current"><span class="current-data"></span>hrs</p>
+            <p class="last"><span class="time"></span> - <span class="previous-data"></span>hrs</p>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/ajkun55/Time-tracking-dashboard">John A</a>.
+    </div>
+  </footer>
+  <script src="./script.js"></script>
+</body>
+</html>
